@@ -6,4 +6,4 @@ services:
     staticPublishPath: build
     envVars:
       - key: NODE_VERSION
-        value: 18
+        value: 24
