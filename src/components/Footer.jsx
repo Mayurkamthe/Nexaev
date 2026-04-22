@@ -1,9 +1,16 @@
 const Footer = () => {
   const links = {
-    Models: ['NXT', 'REO', 'ERA', 'NEO MAX', 'TANK'],
+    Models:  ['NXT', 'REO', 'ERA', 'NEO MAX', 'TANK'],
     Company: ['About Us', 'Careers', 'Press', 'Sustainability', 'Blog'],
     Support: ['Find Dealer', 'Service Centers', 'Warranty', 'FAQ', 'Contact'],
   };
+
+  const socials = [
+    { label: 'Twitter',   href: 'https://twitter.com'   },
+    { label: 'Instagram', href: 'https://instagram.com' },
+    { label: 'LinkedIn',  href: 'https://linkedin.com'  },
+    { label: 'YouTube',   href: 'https://youtube.com'   },
+  ];
 
   return (
     <footer className="bg-ev-dark border-t border-ev-border">
@@ -26,14 +33,16 @@ const Footer = () => {
             </p>
             {/* Social */}
             <div className="flex gap-3">
-              {['Twitter', 'Instagram', 'LinkedIn', 'YouTube'].map(s => (
+              {socials.map(s => (
                 <a
-                  key={s}
-                  href="#"
-                  aria-label={s}
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
                   className="w-9 h-9 rounded-full border border-ev-border flex items-center justify-center text-ev-muted hover:text-neon-green hover:border-neon-green transition-all duration-300 font-mono text-xs"
                 >
-                  {s[0]}
+                  {s.label[0]}
                 </a>
               ))}
             </div>
@@ -46,9 +55,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {items.map(item => (
                   <li key={item}>
-                    <a href="#" className="font-body text-sm text-ev-muted hover:text-white transition-colors duration-200">
+                    <button
+                      onClick={() => {}}
+                      className="font-body text-sm text-ev-muted hover:text-white transition-colors duration-200 text-left"
+                    >
                       {item}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -63,9 +75,13 @@ const Footer = () => {
           </p>
           <div className="flex gap-6">
             {['Privacy Policy', 'Terms of Use', 'Cookie Policy'].map(l => (
-              <a key={l} href="#" className="font-mono text-xs text-ev-muted hover:text-white transition-colors">
+              <button
+                key={l}
+                onClick={() => {}}
+                className="font-mono text-xs text-ev-muted hover:text-white transition-colors"
+              >
                 {l}
-              </a>
+              </button>
             ))}
           </div>
         </div>

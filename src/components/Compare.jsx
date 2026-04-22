@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const allModels = [
   { name: 'NXT',     range: 80,  speed: 45, charge: 4.0,  price: 79999,  color: '#39FF14' },
@@ -41,7 +41,6 @@ const Bar = ({ value, max, color, invert }) => {
 
 const Compare = () => {
   const [selected, setSelected] = useState(['NEO MAX', 'ERA+', 'TANK']);
-  const [open, setOpen] = useState(false);
 
   const chosen = allModels.filter(m => selected.includes(m.name));
 
