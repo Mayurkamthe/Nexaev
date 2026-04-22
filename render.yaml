@@ -3,12 +3,10 @@ services:
     name: nexaev
     env: static
     buildCommand: npm install && npm run build
-    staticPublishPath: build
+    staticPublishPath: ./build
     envVars:
       - key: NODE_VERSION
-        value: 18.20.4
-      - key: CI
-        value: "false"
+        value: 18
     headers:
       - path: /*
         name: Cache-Control
