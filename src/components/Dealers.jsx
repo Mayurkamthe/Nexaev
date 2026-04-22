@@ -20,15 +20,15 @@ const DealerCard = ({ dealer, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.07 }}
     viewport={{ once: true }}
-    className="group bg-ev-card border border-ev-border rounded-2xl p-6 hover:border-neon-green/30 hover:-translate-y-1 transition-all duration-300"
+    className="group bg-bw-card border border-bw-border rounded-2xl p-6 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
   >
     <div className="flex items-start justify-between mb-4">
       <div>
         <h3 className="font-display text-2xl text-white tracking-widest">{dealer.city}</h3>
-        <p className="font-mono text-xs text-ev-muted mt-0.5">{dealer.state}</p>
+        <p className="font-mono text-xs text-bw-muted mt-0.5">{dealer.state}</p>
       </div>
-      <div className="w-10 h-10 rounded-xl bg-neon-green/10 border border-neon-green/20 flex items-center justify-center">
-        <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-neon-green" stroke="currentColor" strokeWidth="1.5">
+      <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center">
+        <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-white" stroke="currentColor" strokeWidth="1.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8.686 2 6 4.686 6 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.314-2.686-6-6-6z"/>
           <circle cx="12" cy="8" r="2" strokeWidth="1.5"/>
         </svg>
@@ -37,35 +37,35 @@ const DealerCard = ({ dealer, index }) => (
 
     <div className="space-y-2.5 mb-5">
       <div className="flex items-start gap-2.5">
-        <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 mt-0.5 text-ev-muted flex-shrink-0" stroke="currentColor" strokeWidth="1.5">
+        <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 mt-0.5 text-bw-muted flex-shrink-0" stroke="currentColor" strokeWidth="1.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M2 2h12v10H2z M5 12v2 M11 12v2"/>
         </svg>
-        <span className="font-body text-sm text-ev-muted">{dealer.address}</span>
+        <span className="font-body text-sm text-bw-muted">{dealer.address}</span>
       </div>
       <div className="flex items-center gap-2.5">
-        <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-ev-muted flex-shrink-0" stroke="currentColor" strokeWidth="1.5">
+        <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-bw-muted flex-shrink-0" stroke="currentColor" strokeWidth="1.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M2 3.5A1.5 1.5 0 013.5 2h.878c.414 0 .75.336.75.75v2.828a.75.75 0 01-.219.53l-1.4 1.4a8.002 8.002 0 004.483 4.483l1.4-1.4a.75.75 0 01.53-.22h2.829a.75.75 0 01.75.75V12.5A1.5 1.5 0 0112.5 14 10.5 10.5 0 012 3.5z"/>
         </svg>
-        <a href={`tel:${dealer.phone}`} className="font-body text-sm text-ev-muted hover:text-neon-green transition-colors">{dealer.phone}</a>
+        <a href={`tel:${dealer.phone}`} className="font-body text-sm text-bw-muted hover:text-white transition-colors">{dealer.phone}</a>
       </div>
       <div className="flex items-center gap-2.5">
-        <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-ev-muted flex-shrink-0" stroke="currentColor" strokeWidth="1.5">
+        <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-bw-muted flex-shrink-0" stroke="currentColor" strokeWidth="1.5">
           <circle cx="8" cy="8" r="6"/><path strokeLinecap="round" d="M8 5v3l2 2"/>
         </svg>
-        <span className="font-body text-sm text-ev-muted">{dealer.timing}</span>
+        <span className="font-body text-sm text-bw-muted">{dealer.timing}</span>
       </div>
     </div>
 
-    <div className="flex items-center justify-between pt-4 border-t border-ev-border">
+    <div className="flex items-center justify-between pt-4 border-t border-bw-border">
       <div>
-        <span className="font-mono text-xs text-ev-muted">Models Available: </span>
-        <span className="font-mono text-xs text-neon-green font-bold">{dealer.models}/11</span>
+        <span className="font-mono text-xs text-bw-muted">Models Available: </span>
+        <span className="font-mono text-xs text-white font-bold">{dealer.models}/11</span>
       </div>
       <a
         href={`https://maps.google.com/?q=Neexa+EV+${dealer.city}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-4 py-1.5 rounded-full border border-neon-green/30 text-neon-green font-mono text-xs uppercase tracking-widest hover:bg-neon-green hover:text-ev-dark transition-all duration-300"
+        className="px-4 py-1.5 rounded-full border border-white/30 text-white font-mono text-xs uppercase tracking-widest hover:bg-white hover:text-bw-bg transition-all duration-300"
       >
         Get Directions
       </a>
@@ -88,11 +88,11 @@ const Dealers = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="font-mono text-xs text-neon-green uppercase tracking-widest">Dealership Network</span>
+          <span className="font-mono text-xs text-white uppercase tracking-widest">Dealership Network</span>
           <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl mt-3 mb-4">
             FIND A <span className="text-gradient">DEALER</span>
           </h2>
-          <p className="font-body text-ev-muted max-w-xl mx-auto">
+          <p className="font-body text-bw-muted max-w-xl mx-auto">
             200+ service centers across India. A Neexa EV expert is always nearby.
           </p>
         </motion.div>
@@ -105,8 +105,8 @@ const Dealers = () => {
               onClick={() => setActiveState(s)}
               className={`px-5 py-2 rounded-full font-mono text-xs uppercase tracking-widest border transition-all duration-200 ${
                 activeState === s
-                  ? 'bg-neon-green text-ev-dark border-neon-green font-bold'
-                  : 'border-ev-border text-ev-muted hover:border-neon-green/40 hover:text-white'
+                  ? 'bg-white text-bw-bg border-white font-bold'
+                  : 'border-bw-border text-bw-muted hover:border-white/40 hover:text-white'
               }`}
             >
               {s}
@@ -126,15 +126,15 @@ const Dealers = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 rounded-3xl border border-neon-green/20 bg-neon-green/5 p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+          className="mt-12 rounded-3xl border border-white/20 bg-white/5 p-8 flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <div>
             <h3 className="font-display text-3xl text-white mb-1">No dealer nearby?</h3>
-            <p className="font-body text-ev-muted text-sm">We deliver to your doorstep across India. Free delivery on all models.</p>
+            <p className="font-body text-bw-muted text-sm">We deliver to your doorstep across India. Free delivery on all models.</p>
           </div>
           <a
             href="#contact"
-            className="flex-shrink-0 px-8 py-3 bg-neon-green text-ev-dark font-body font-bold text-sm uppercase tracking-widest rounded-full hover:shadow-[0_0_30px_rgba(57,255,20,0.4)] hover:scale-105 transition-all duration-300"
+            className="flex-shrink-0 px-8 py-3 bg-white text-bw-bg font-body font-bold text-sm uppercase tracking-widest rounded-full hover:shadow-[0_0_30px_rgba(57,255,20,0.4)] hover:scale-105 transition-all duration-300"
           >
             Request Home Delivery
           </a>

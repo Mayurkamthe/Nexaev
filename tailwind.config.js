@@ -6,47 +6,39 @@ module.exports = {
     extend: {
       fontFamily: {
         display: ["'Bebas Neue'", "cursive"],
-        body: ["'DM Sans'", "sans-serif"],
-        mono: ["'Space Mono'", "monospace"],
+        body:    ["'DM Sans'", "sans-serif"],
+        mono:    ["'Space Mono'", "monospace"],
       },
       colors: {
-        neon: {
-          green: '#39FF14',
-          lime: '#AAFF00',
-        },
-        ev: {
-          dark: '#080C10',
-          card: '#0D1117',
-          border: '#1C2333',
-          accent: '#00E5FF',
-          orange: '#FF6B00',
-          muted: '#8892A4',
+        bw: {
+          bg:      '#0A0A0A',
+          card:    '#111111',
+          border:  '#222222',
+          muted:   '#666666',
+          subtle:  '#333333',
+          white:   '#FFFFFF',
+          offwhite:'#E8E8E8',
+          accent:  '#CCCCCC',
         }
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #080C10 0%, #0D1F2D 50%, #091A14 100%)',
-        'card-gradient': 'linear-gradient(145deg, #0D1117, #111827)',
-        'glow-green': 'radial-gradient(ellipse at center, rgba(57,255,20,0.15) 0%, transparent 70%)',
-        'glow-cyan': 'radial-gradient(ellipse at center, rgba(0,229,255,0.12) 0%, transparent 70%)',
+        'hero-gradient': 'linear-gradient(135deg, #0A0A0A 0%, #111111 50%, #0A0A0A 100%)',
+        'card-gradient': 'linear-gradient(145deg, #111111, #181818)',
+        'glow-white':    'radial-gradient(ellipse at center, rgba(255,255,255,0.06) 0%, transparent 70%)',
       },
       animation: {
-        'float': 'float 6s ease-in-out infinite',
+        'float':      'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s ease-in-out infinite',
-        'slide-up': 'slideUp 0.6s ease-out forwards',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        'glow':       'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        slideUp: {
-          from: { opacity: 0, transform: 'translateY(40px)' },
-          to: { opacity: 1, transform: 'translateY(0)' },
+          '50%':      { transform: 'translateY(-20px)' },
         },
         glow: {
-          from: { textShadow: '0 0 10px #39FF14, 0 0 20px #39FF14' },
-          to: { textShadow: '0 0 20px #39FF14, 0 0 40px #39FF14, 0 0 60px #39FF14' },
+          from: { textShadow: '0 0 10px rgba(255,255,255,0.4)' },
+          to:   { textShadow: '0 0 30px rgba(255,255,255,0.8), 0 0 60px rgba(255,255,255,0.3)' },
         }
       }
     },

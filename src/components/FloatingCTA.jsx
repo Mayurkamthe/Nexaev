@@ -34,10 +34,10 @@ const FloatingCTA = () => {
                   initial={{ opacity: 0, x: 10 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 10 }}
-                  className="absolute right-14 top-1/2 -translate-y-1/2 whitespace-nowrap bg-ev-card border border-ev-border rounded-xl px-4 py-2"
+                  className="absolute right-14 top-1/2 -translate-y-1/2 whitespace-nowrap bg-bw-card border border-bw-border rounded-xl px-4 py-2"
                 >
                   <span className="font-body text-xs text-white">Chat on WhatsApp</span>
-                  <div className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-3 h-3 bg-ev-card border-r border-t border-ev-border rotate-45" />
+                  <div className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-3 h-3 bg-bw-card border-r border-t border-bw-border rotate-45" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -62,7 +62,7 @@ const FloatingCTA = () => {
             transition={{ type: 'spring', stiffness: 300 }}
             onClick={scrollToTop}
             aria-label="Back to top"
-            className="w-12 h-12 rounded-full bg-ev-card border border-neon-green/40 flex items-center justify-center text-neon-green hover:bg-neon-green hover:text-ev-dark hover:shadow-[0_0_20px_rgba(57,255,20,0.4)] hover:scale-110 transition-all duration-300"
+            className="w-12 h-12 rounded-full bg-bw-card border border-white/40 flex items-center justify-center text-white hover:bg-white hover:text-bw-bg hover:shadow-[0_0_20px_rgba(57,255,20,0.4)] hover:scale-110 transition-all duration-300"
           >
             <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
               <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd"/>
